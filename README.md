@@ -4,7 +4,7 @@
 
 <h3> Descripción breve </h3>
 
-<p align="center"> Este es un test project desarrollado en Java utilizando las librerias de Selenium, JUnit y Apache POI. Su finalidad es automatizar los posibles casos de prueba de la pagina seleccionada, en este caso "Pet Store".</p>
+<p align="center"> Este es un test project desarrollado en Java utilizando las librerias de Selenium, TestNG, JUnit y Apache POI. Su finalidad es automatizar los posibles casos de prueba de la pagina seleccionada, en este caso "Pet Store".</p>
 
 <h3> Instrucciones </h3>
 
