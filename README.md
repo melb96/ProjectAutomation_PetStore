@@ -21,6 +21,16 @@ Selenium:
             <version>3.141.59</version>
         </dependency>
 ```
+TestNG
+
+```shell
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.1</version>
+            <scope>test</scope>
+        </dependency>
+```
 
 JUnit
 
