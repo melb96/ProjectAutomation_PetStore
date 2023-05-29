@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite de Pruebas">
+
+    <test name="Pruebas de Login">
+        <classes>
+            <class name="tests.SignInTest"/>
+        </classes>
+    </test>
+
+    <test name="Pruebas de Registro">
+    <classes>
+              <class name="tests.SignUpTest" />
+    </classes>
+    </test>
+
+    <test name="Pruebas de Busqueda">
+        <classes>
+            <class name="tests.SearchTest" />
+        </classes>
+    </test>
+
+    <test name="Pruebas de Cart">
+        <classes>
+            <class name="tests.CartTest" />
+        </classes>
+    </test>
+
+    <test name="Pruebas de Modificar cuenta">
+        <classes>
+            <class name="tests.EditAccountTest" />
+        </classes>
+    </test>
+
+    <test name="Pruebas de Cerrar sesion">
+        <classes>
+            <class name="tests.SignOutTest" />
+        </classes>
+    </test>
+
+</suite>
