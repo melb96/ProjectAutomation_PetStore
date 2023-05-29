@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import pages.HomePage;
 import pages.SignUpPage;
 import pages.SignInPage;
@@ -19,7 +21,7 @@ public class SignUpTest{
     SignUpPage signUpPage;
     SignInPage signInPage;
 
-    @Before
+    @BeforeTest
     public void setUp() throws InterruptedException {
 
         signUpPage = new SignUpPage(driver);
@@ -100,7 +102,7 @@ public class SignUpTest{
     }
 
 
-    @After
+    @AfterTest
     public void tearDown() throws InterruptedException{
 
       Thread.sleep(5000);

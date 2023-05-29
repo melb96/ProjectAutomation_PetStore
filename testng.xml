@@ -1,40 +1,33 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite de Pruebas">
-
-    <test name="Pruebas de Login">
+<suite name="Test Suite">
+    <test name="Login test">
         <classes>
             <class name="tests.SignInTest"/>
         </classes>
     </test>
-
-    <test name="Pruebas de Registro">
+    <test name="SignUp Test">
     <classes>
-              <class name="tests.SignUpTest" />
+              <class name="tests.SignUpTest"/>
     </classes>
     </test>
-
-    <test name="Pruebas de Busqueda">
+    <test name="Search Test">
         <classes>
             <class name="tests.SearchTest" />
         </classes>
     </test>
-
-    <test name="Pruebas de Cart">
+    <test name="Cart Test">
         <classes>
             <class name="tests.CartTest" />
         </classes>
     </test>
-
-    <test name="Pruebas de Modificar cuenta">
+    <test name="EditAccount Test">
         <classes>
             <class name="tests.EditAccountTest" />
         </classes>
     </test>
-
-    <test name="Pruebas de Cerrar sesion">
+    <test name="SignOut Test">
         <classes>
             <class name="tests.SignOutTest" />
         </classes>
     </test>
-
 </suite>

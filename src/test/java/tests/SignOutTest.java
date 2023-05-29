@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import pages.HomePage;
 import pages.SignInPage;
 
@@ -17,7 +19,7 @@ public class SignOutTest {
     HomePage homePage;
     SignInPage signInPage;
 
-    @Before
+    @BeforeTest
     public void setUp() throws IOException, InterruptedException {
 
         homePage = new HomePage(driver);
@@ -45,7 +47,7 @@ public class SignOutTest {
 
     }
 
-    @After
+    @AfterTest
     public void tearDown(){
 
         driver.quit();

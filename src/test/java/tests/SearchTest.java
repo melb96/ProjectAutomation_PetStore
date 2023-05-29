@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import pages.HomePage;
 
 import java.io.IOException;
@@ -15,7 +17,7 @@ public class SearchTest {
     private WebDriver driver;
     HomePage homePage;
 
-    @Before
+    @BeforeTest
     public void setUp() throws InterruptedException {
 
         homePage = new HomePage(driver);
@@ -43,7 +45,7 @@ public class SearchTest {
 
     }
 
-    @After
+    @AfterTest
     public void tearDown() throws InterruptedException{
 
         homePage.returnMenu();
