@@ -41,11 +41,9 @@ public class CartTest {
         cartPage = new CartPage(driver);
         myAccountPage = new MyAccountPage(driver);
 
-
     }
 
     @Test
-
     public void testCart() throws InterruptedException{
 
         homePage.clickCart();
@@ -126,7 +124,6 @@ public class CartTest {
     }
 
     @AfterTest
-
     public void tearDown () throws InterruptedException {
 
         Thread.sleep(2000);

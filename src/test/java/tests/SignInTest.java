@@ -59,7 +59,6 @@ public class SignInTest{
     }
 
     @AfterTest
-
     public void tearDown(){
 
         driver.quit();

@@ -68,7 +68,6 @@ public class SignUpTest{
     }
 
     @Test
-
     public void repeatTestSignUp () throws IOException, InterruptedException {
 
         homePage.clickSignInButton();
