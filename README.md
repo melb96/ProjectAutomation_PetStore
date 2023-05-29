@@ -27,7 +27,7 @@ TestNG
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.1</version>
+            <version>6.9.8</version>
             <scope>test</scope>
         </dependency>
 ```
@@ -145,5 +145,90 @@ Funcion para llamar las propiedades:
         }
     }
 ```
-8. Ejecutar los tests via comando mvn test.
-9. Generar reportes via TestNG (Plugin Maven surefireReports).
+8. Generar reportes via TestNG (Plugin Maven surefireReports).
+
+Configuramos en el archivo pom.xml los plugins necesarios:
+
+```shell
+ <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+```
+
+Creamos el archivo testng.xml
+
+```shell
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite de Pruebas">
+
+    <test name="Pruebas de Login">
+        <classes>
+            <class name="tests.SignInTest"/>
+        </classes>
+    </test>
+
+    <test name="Pruebas de Registro">
+    <classes>
+              <class name="tests.SignUpTest" />
+    </classes>
+    </test>
+
+    <test name="Pruebas de Busqueda">
+        <classes>
+            <class name="tests.SearchTest" />
+        </classes>
+    </test>
+
+    <test name="Pruebas de Cart">
+        <classes>
+            <class name="tests.CartTest" />
+        </classes>
+    </test>
+
+    <test name="Pruebas de Modificar cuenta">
+        <classes>
+            <class name="tests.EditAccountTest" />
+        </classes>
+    </test>
+
+    <test name="Pruebas de Cerrar sesion">
+        <classes>
+            <class name="tests.SignOutTest" />
+        </classes>
+    </test>
+
+</suite>
+```
+
+9. Ejecutar los tests via comando mvn test.
