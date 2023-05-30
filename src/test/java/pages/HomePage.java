@@ -14,6 +14,7 @@ public class HomePage extends Base {
     private By searchField = By.xpath("//*[@id=\"SearchContent\"]/form/input[1]");
     private By searchButton = By.xpath("//*[@id=\"SearchContent\"]/form/input[2]");
     private By birdImage = By.xpath("//*[@id=\"MainImageContent\"]/map/area[1]");
+    private By catImage = By.xpath("/html/body/div[2]/div[2]/div[2]/div/map/area[5]");
     private By returnMenuButton = By.linkText("Return to Main Menu");
     private By cartButton = By.xpath("//*[@id=\"MenuContent\"]/a[1]/img");
     private By fishButton = By.xpath("//*[@id=\"QuickLinks\"]/a[1]/img");
@@ -87,6 +88,13 @@ public class HomePage extends Base {
     public void clickBirds() throws InterruptedException{
 
         click(birdImage);
+        Thread.sleep((2000));
+
+    }
+
+    public void clickCats() throws InterruptedException{
+
+        click(catImage);
         Thread.sleep((2000));
 
     }

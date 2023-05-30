@@ -63,12 +63,11 @@ public class SignInPage extends Base {
 
         String filepath =  ruteProject+getProperties("ruteExcel");
         String sheetName = getProperties("nameSheet");
-        String getData = readFile.getCellValue(filepath,sheetName,4,2);
+        String getData = readFile.getCellValue(filepath,sheetName,7,2);
         clearText(passwordField);
         type(getData, passwordField);
 
     }
-
 
     public void clickSigninButton() throws InterruptedException{
 

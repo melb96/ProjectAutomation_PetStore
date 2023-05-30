@@ -50,6 +50,7 @@ public class EditAccountTest {
         homePage.clickSignInButton();
         signInPage.enterUsername();
         signInPage.enterNewPassword();
+        signInPage.clickSigninButton();
 
         Assert.assertTrue(homePage.getTextLocator(By.cssSelector("#WelcomeContent")).contains("Welcome"));
 
@@ -66,7 +67,6 @@ public class EditAccountTest {
         myAccountPage.enterNewEmail();
         myAccountPage.selectNewLanguaje();
         myAccountPage.saveChanges();
-        Thread.sleep(3000);
         homePage.clickSignOutButton();
         homePage.clickSignInButton();
         signInPage.enterUsername();

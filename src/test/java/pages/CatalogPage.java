@@ -8,7 +8,8 @@ public class CatalogPage extends Base {
 
     private By birdExample = By.linkText("AV-CB-01");
     private By dogExample = By.linkText("K9-RT-01");
-    private By itemID = By.linkText("EST-18");
+    private By catExample = By.linkText("FL-DLH-02");
+    private By itemID = By.linkText("EST-17");
     private By addToCart = By.linkText("Add to Cart");
     private By returnCatalogMenu = By.linkText("Return to BIRDS");
     private By returnItemId = By.linkText("Return to AV-CB-01");
@@ -20,6 +21,13 @@ public class CatalogPage extends Base {
     public void clickBirdExample () throws InterruptedException {
 
         click(birdExample);
+        Thread.sleep(3000);
+
+    }
+
+    public void clickCatExample () throws InterruptedException {
+
+        click(catExample);
         Thread.sleep(3000);
 
     }

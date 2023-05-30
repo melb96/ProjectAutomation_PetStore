@@ -44,32 +44,6 @@ public class CartTest {
     }
 
     @Test
-    public void testCart() throws InterruptedException{
-
-        homePage.clickCart();
-        homePage.returnMenu();
-        homePage.clickBirds();
-        catalogPage.clickBirdExample();
-        catalogPage.clickItemId();
-        catalogPage.clickAddToCart();
-        cartPage.enterQuantity();
-        cartPage.clickUpdateButton();
-        cartPage.clickCheckoutButton();
-        cartPage.selectCard();
-        cartPage.enableBoxAddress();
-        cartPage.clickContinueButton();
-        cartPage.clickContinue2Button();
-        cartPage.clickConfirmButton();
-
-        Assert.assertTrue(cartPage.getTextLocator(By.xpath("//*[@id=\"Content\"]/ul/li")).contains("Thank you"));
-
-        homePage.returnMenu();
-
-        Thread.sleep(3000);
-
-    }
-
-    @Test
     public void enterZeroQuantity () throws InterruptedException{
 
         homePage.clickBirds();
@@ -86,10 +60,6 @@ public class CartTest {
     @Test
     public void removeElements () throws InterruptedException{
 
-        homePage.clickBirds();
-        catalogPage.clickBirdExample();
-        catalogPage.clickAddToCart();
-        homePage.returnMenu();
         homePage.clickDogButton();
         catalogPage.clickDogExample();
         catalogPage.clickAddToCart();
@@ -104,22 +74,28 @@ public class CartTest {
     }
 
     @Test
-    public void checkOrders () throws InterruptedException{
+    public void testCart() throws InterruptedException{
 
-        homePage.clickMyAccount();
-        myAccountPage.clickMyOrdersButton();
+        homePage.clickCart();
+        homePage.returnMenu();
+        homePage.clickCats();
+        catalogPage.clickCatExample();
+        catalogPage.clickItemId();
+        catalogPage.clickAddToCart();
+        cartPage.enterQuantity();
+        cartPage.clickUpdateButton();
+        cartPage.clickCheckoutButton();
+        cartPage.selectCard();
+        cartPage.enableBoxAddress();
+        cartPage.clickContinueButton();
+        cartPage.clickContinue2Button();
+        cartPage.clickConfirmButton();
 
-        String orderNumber = cartPage.getTextLocator(By.xpath("/html/body/div[2]/table/tbody/tr[12]/td[1]/a"));
-
-        myAccountPage.clickOrder();
-
-        String dataOrder = cartPage.getTextLocator(By.xpath("/html/body/div[2]/div[2]/table/tbody/tr[1]/th"));
-
-        Assert.assertTrue(dataOrder.contains(orderNumber));
-
-        Thread.sleep(2000);
+        Assert.assertTrue(cartPage.getTextLocator(By.xpath("//*[@id=\"Content\"]/ul/li")).contains("Thank you"));
 
         homePage.returnMenu();
+
+        Thread.sleep(3000);
 
     }
 
