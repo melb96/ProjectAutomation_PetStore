@@ -18,6 +18,7 @@ public class SignUpPage extends Base {
     private By emailField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[3]/td[2]/input");
     private By phoneField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[4]/td[2]/input");
     private By addressField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[5]/td[2]/input");
+    private By addressField2 = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[6]/td[2]/input");
     private By cityField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[7]/td[2]/input");
     private By stateField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[8]/td[2]/input");
     private By zipField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[9]/td[2]/input");
@@ -113,6 +114,16 @@ public class SignUpPage extends Base {
         String getData = readFile.getCellValue(filepath,sheetName,4,7);
         clearText(addressField);
         type(getData, addressField);
+
+    }
+
+    public void enterAddress2 () throws IOException{
+
+        String filepath =  ruteProject+getProperties("ruteExcel");
+        String sheetName = getProperties("nameSheet");
+        String getData = readFile.getCellValue(filepath,sheetName,4,7);
+        clearText(addressField2);
+        type(getData, addressField2);
 
     }
 

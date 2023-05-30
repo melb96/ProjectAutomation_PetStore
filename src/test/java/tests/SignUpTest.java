@@ -34,40 +34,6 @@ public class SignUpTest{
     }
 
     @Test
-    public void testSignUp() throws IOException, InterruptedException{
-
-        homePage.clickSignInButton();
-        signInPage.clickSignUpButton();
-
-        signUpPage.enterId();
-        signUpPage.enterPassword();
-        signUpPage.repeatPassword();
-        signUpPage.enterName();
-        signUpPage.enterLastName();
-        signUpPage.enterEmail();
-        signUpPage.enterPhone();
-        signUpPage.enterAddress();
-        signUpPage.enterCity();
-        signUpPage.enterState();
-        signUpPage.enterZip();
-        signUpPage.enterCountry();
-        signUpPage.selectLanguaje();
-        signUpPage.selectCategory();
-        signUpPage.enableMyList();
-        signUpPage.enableMyBanner();
-        signUpPage.clickSignUpButton();
-        homePage.clickSignInButton();
-        signInPage.enterUsername();
-        signInPage.enterPassword();
-        signInPage.clickSigninButton();
-
-        Assert.assertTrue(homePage.getTextLocator(By.cssSelector("#WelcomeContent")).contains("Welcome"));
-
-        Thread.sleep(3000);
-
-    }
-
-    @Test
     public void repeatTestSignUp () throws IOException, InterruptedException {
 
         homePage.clickSignInButton();
@@ -98,6 +64,40 @@ public class SignUpTest{
 
     }
 
+    @Test
+    public void testSignUp() throws IOException, InterruptedException{
+
+        homePage.clickSignInButton();
+        signInPage.clickSignUpButton();
+
+        signUpPage.enterId();
+        signUpPage.enterPassword();
+        signUpPage.repeatPassword();
+        signUpPage.enterName();
+        signUpPage.enterLastName();
+        signUpPage.enterEmail();
+        signUpPage.enterPhone();
+        signUpPage.enterAddress();
+        signUpPage.enterAddress2();
+        signUpPage.enterCity();
+        signUpPage.enterState();
+        signUpPage.enterZip();
+        signUpPage.enterCountry();
+        signUpPage.selectLanguaje();
+        signUpPage.selectCategory();
+        signUpPage.enableMyList();
+        signUpPage.enableMyBanner();
+        signUpPage.clickSignUpButton();
+        homePage.clickSignInButton();
+        signInPage.enterUsername();
+        signInPage.enterPassword();
+        signInPage.clickSigninButton();
+
+        Assert.assertTrue(homePage.getTextLocator(By.cssSelector("#WelcomeContent")).contains("Welcome"));
+
+        Thread.sleep(3000);
+
+    }
 
     @AfterTest
     public void tearDown() throws InterruptedException{
