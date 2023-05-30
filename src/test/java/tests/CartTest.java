@@ -43,7 +43,7 @@ public class CartTest {
 
     }
 
-    @Test
+    @Test(priority = 3)
     public void enterZeroQuantity () throws InterruptedException{
 
         homePage.clickBirds();
@@ -57,7 +57,7 @@ public class CartTest {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void removeElements () throws InterruptedException{
 
         homePage.clickDogButton();
@@ -73,7 +73,7 @@ public class CartTest {
         Assert.assertNotEquals(newTotal,totalPartial);
     }
 
-    @Test
+    @Test(priority = 1)
     public void testCart() throws InterruptedException{
 
         homePage.clickCart();

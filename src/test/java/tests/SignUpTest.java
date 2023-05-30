@@ -33,38 +33,7 @@ public class SignUpTest{
 
     }
 
-    @Test
-    public void repeatTestSignUp () throws IOException, InterruptedException {
-
-        homePage.clickSignInButton();
-        signInPage.clickSignUpButton();
-
-        signUpPage.enterId();
-        signUpPage.enterPassword();
-        signUpPage.repeatPassword();
-        signUpPage.enterName();
-        signUpPage.enterLastName();
-        signUpPage.enterEmail();
-        signUpPage.enterPhone();
-        signUpPage.enterAddress();
-        signUpPage.enterCity();
-        signUpPage.enterState();
-        signUpPage.enterZip();
-        signUpPage.enterCountry();
-        signUpPage.selectLanguaje();
-        signUpPage.selectCategory();
-        signUpPage.enableMyList();
-        signUpPage.enableMyBanner();
-
-        signUpPage.clickSignUpButton();
-
-        Assert.assertTrue(homePage.getTextLocator(By.xpath("/html/body/h1")).contains("HTTP Status 500 – Internal Server Error"));
-
-        Thread.sleep(3000);
-
-    }
-
-    @Test
+   @Test(priority = 1)
     public void testSignUp() throws IOException, InterruptedException{
 
         homePage.clickSignInButton();
@@ -93,7 +62,42 @@ public class SignUpTest{
         signInPage.enterPassword();
         signInPage.clickSigninButton();
 
-        Assert.assertTrue(homePage.getTextLocator(By.cssSelector("#WelcomeContent")).contains("Welcome"));
+        String welcomeText = homePage.getTextLocator(By.cssSelector("#WelcomeContent"));
+        Assert.assertEquals("Welcome NameTest!",welcomeText);
+
+        homePage.clickSignOutButton();
+
+        Thread.sleep(3000);
+
+    }
+
+    @Test(priority = 2)
+    public void repeatTestSignUp () throws IOException, InterruptedException {
+
+        homePage.clickSignInButton();
+        signInPage.clickSignUpButton();
+
+        signUpPage.enterId();
+        signUpPage.enterPassword();
+        signUpPage.repeatPassword();
+        signUpPage.enterName();
+        signUpPage.enterLastName();
+        signUpPage.enterEmail();
+        signUpPage.enterPhone();
+        signUpPage.enterAddress();
+        signUpPage.enterCity();
+        signUpPage.enterState();
+        signUpPage.enterZip();
+        signUpPage.enterCountry();
+        signUpPage.selectLanguaje();
+        signUpPage.selectCategory();
+        signUpPage.enableMyList();
+        signUpPage.enableMyBanner();
+
+        signUpPage.clickSignUpButton();
+
+        String errorMessage = homePage.getTextLocator(By.cssSelector("body:nth-child(2) > h1:nth-child(1)"));
+        Assert.assertEquals("HTTP Status 500 – Internal Server Error",errorMessage);
 
         Thread.sleep(3000);
 
