@@ -232,3 +232,7 @@ Creamos el archivo testng.xml
 ```
 
 9. Ejecutar los tests via comando mvn test.
+
+<h3> Video de ejecución del proyecto </h3>
+
+https://drive.google.com/file/d/1M8V3bkFJWravPTDU1TupbWAtBnnWK7O5/view?usp=sharing
