@@ -43,7 +43,7 @@ public class CartTest {
 
     }
 
-    @Test(priority = 3)
+    @Test(priority = 2)
     public void enterZeroQuantity () throws InterruptedException{
 
         homePage.clickBirds();
@@ -57,7 +57,7 @@ public class CartTest {
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void removeElements () throws InterruptedException{
 
         homePage.clickDogButton();
