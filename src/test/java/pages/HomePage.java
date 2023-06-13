@@ -9,22 +9,17 @@ import java.io.IOException;
 
 public class HomePage extends Base {
 
-    private By signinButton = By.linkText("Sign In");
-    private By signOutButton = By.linkText("Sign Out");
-    private By searchField = By.xpath("//*[@id=\"SearchContent\"]/form/input[1]");
-    private By searchButton = By.xpath("//*[@id=\"SearchContent\"]/form/input[2]");
-    private By birdImage = By.xpath("//*[@id=\"MainImageContent\"]/map/area[1]");
-    private By catImage = By.xpath("/html/body/div[2]/div[2]/div[2]/div/map/area[5]");
-    private By returnMenuButton = By.linkText("Return to Main Menu");
-    private By cartButton = By.xpath("//*[@id=\"MenuContent\"]/a[1]/img");
-    private By fishButton = By.xpath("//*[@id=\"QuickLinks\"]/a[1]/img");
-    private By dogButton = By.xpath("//*[@id=\"QuickLinks\"]/a[2]/img");
-    private By reptileButton = By.xpath("//*[@id=\"QuickLinks\"]/a[3]/img");
-    private By catButton = By.xpath("//*[@id=\"QuickLinks\"]/a[4]/img");
-    private By birdButton = By.xpath("//*[@id=\"QuickLinks\"]/a[5]/img");
-    private By myAccount = By.linkText("My Account");
-    private By homeButton = By.xpath("//*[@id=\"LogoContent\"]/a/img");
-    private String ruteProject = System.getProperty("user.dir");
+    private final By signinButton = By.linkText("Sign In");
+    private final By signOutButton = By.linkText("Sign Out");
+    private final By searchField = By.xpath("//*[@id=\"SearchContent\"]/form/input[1]");
+    private final By searchButton = By.xpath("//*[@id=\"SearchContent\"]/form/input[2]");
+    private final By birdImage = By.xpath("//*[@id=\"MainImageContent\"]/map/area[1]");
+    private final By catImage = By.xpath("/html/body/div[2]/div[2]/div[2]/div/map/area[5]");
+    private final By returnMenuButton = By.linkText("Return to Main Menu");
+    private final By cartButton = By.xpath("//*[@id=\"MenuContent\"]/a[1]/img");
+    private final By dogButton = By.xpath("//*[@id=\"QuickLinks\"]/a[2]/img");
+    private final By myAccount = By.linkText("My Account");
+    private final String ruteProject = System.getProperty("user.dir");
 
     ReadExcelFile readFile = new ReadExcelFile();
 
@@ -99,12 +94,6 @@ public class HomePage extends Base {
 
     }
 
-    public void clickFishButton () throws InterruptedException {
-
-        click(fishButton);
-        Thread.sleep(3000);
-
-    }
 
     public void clickDogButton () throws InterruptedException {
 
@@ -113,26 +102,6 @@ public class HomePage extends Base {
 
     }
 
-    public void clickReptileButton () throws InterruptedException {
-
-        click(reptileButton);
-        Thread.sleep(3000);
-
-    }
-
-    public void clickCatButton () throws InterruptedException {
-
-        click(catButton);
-        Thread.sleep(3000);
-
-    }
-
-    public void clickBirdButton () throws InterruptedException {
-
-        click(birdButton);
-        Thread.sleep(3000);
-
-    }
 
     public void clickMyAccount () throws InterruptedException{
 
@@ -141,11 +110,5 @@ public class HomePage extends Base {
 
     }
 
-    public void clickHomeButton() throws InterruptedException{
-
-        click(homeButton);
-        Thread.sleep(3000);
-
-    }
 
 }

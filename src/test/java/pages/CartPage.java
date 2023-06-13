@@ -7,15 +7,15 @@ import utilities.Base;
 
 public class CartPage extends Base {
 
-    private By updateCartButton = By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[3]/td[1]/input");
-    private By removeButton = By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[2]/td[8]/a");
-    private By checkoutButton = By.linkText("Proceed to Checkout");
-    private By quantityField = By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[2]/td[5]/input");
-    private By cardField = By.xpath("//*[@id=\"Catalog\"]/form/table/tbody/tr[2]/td[2]/select");
-    private By boxAddress = By.xpath("//*[@id=\"Catalog\"]/form/table/tbody/tr[14]/td/input");
-    private By continueButton = By.xpath("//*[@id=\"Catalog\"]/form/table/tbody/tr[14]/td/input");
-    private By continue2Button = By.xpath("//*[@id=\"Catalog\"]/form/input");
-    private By confirmButton = By.linkText("Confirm");
+    private final By updateCartButton = By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[3]/td[1]/input");
+    private final By removeButton = By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[2]/td[8]/a");
+    private final By checkoutButton = By.linkText("Proceed to Checkout");
+    private final By quantityField = By.xpath("//*[@id=\"Cart\"]/form/table/tbody/tr[2]/td[5]/input");
+    private final By cardField = By.xpath("//*[@id=\"Catalog\"]/form/table/tbody/tr[2]/td[2]/select");
+    private final By boxAddress = By.xpath("//*[@id=\"Catalog\"]/form/table/tbody/tr[14]/td/input");
+    private final By continueButton = By.xpath("//*[@id=\"Catalog\"]/form/table/tbody/tr[14]/td/input");
+    private final By continue2Button = By.xpath("//*[@id=\"Catalog\"]/form/input");
+    private final By confirmButton = By.linkText("Confirm");
 
 
     public CartPage(WebDriver driver) {
@@ -45,7 +45,7 @@ public class CartPage extends Base {
 
     }
 
-    public void enterQuantity () throws InterruptedException {
+    public void enterQuantity () {
 
         clearText(quantityField);
         type("3", quantityField);

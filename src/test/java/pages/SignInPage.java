@@ -9,11 +9,11 @@ import java.io.IOException;
 
 public class SignInPage extends Base {
 
-    private By usernameField = By.xpath("/html/body/div[2]/div/form/p[2]/input[1]");
-    private By passwordField = By.xpath("/html/body/div[2]/div/form/p[2]/input[2]");
-    private By signinButton = By.xpath("//*[@id=\"Catalog\"]/form/input");
-    private By signupButton = By.linkText("Register Now!");
-    private String ruteProject = System.getProperty("user.dir");
+    private final By usernameField = By.xpath("/html/body/div[2]/div/form/p[2]/input[1]");
+    private final By passwordField = By.xpath("/html/body/div[2]/div/form/p[2]/input[2]");
+    private final By signinButton = By.xpath("//*[@id=\"Catalog\"]/form/input");
+    private final By signupButton = By.linkText("Register Now!");
+    private final String ruteProject = System.getProperty("user.dir");
 
     public SignInPage(WebDriver driver) {
         super(driver);

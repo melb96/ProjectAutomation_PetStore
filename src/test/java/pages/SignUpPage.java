@@ -10,25 +10,25 @@ import java.io.IOException;
 
 public class SignUpPage extends Base {
 
-    private By idField = By.xpath("/html/body/div[2]/div/form/table[1]/tbody/tr[1]/td[2]/input");
-    private By passwordField = By.xpath("/html/body/div[2]/div/form/table[1]/tbody/tr[2]/td[2]/input");
-    private By repeatPasswordField = By.xpath("/html/body/div[2]/div/form/table[1]/tbody/tr[3]/td[2]/input");
-    private By nameField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[1]/td[2]/input");
-    private By lastnameField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[2]/td[2]/input");
-    private By emailField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[3]/td[2]/input");
-    private By phoneField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[4]/td[2]/input");
-    private By addressField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[5]/td[2]/input");
-    private By addressField2 = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[6]/td[2]/input");
-    private By cityField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[7]/td[2]/input");
-    private By stateField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[8]/td[2]/input");
-    private By zipField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[9]/td[2]/input");
-    private By countryField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[10]/td[2]/input");
-    private By languajeField = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[1]/td[2]/select");
-    private By categoryField = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[2]/td[2]/select");
-    private By myListBox = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[3]/td[2]/input");
-    private By myBannerBox = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[4]/td[2]/input");
-    private By signupButton = By.xpath("/html/body/div[2]/div/form/input");
-    private String ruteProject = System.getProperty("user.dir");
+    private final By idField = By.xpath("/html/body/div[2]/div/form/table[1]/tbody/tr[1]/td[2]/input");
+    private final By passwordField = By.xpath("/html/body/div[2]/div/form/table[1]/tbody/tr[2]/td[2]/input");
+    private final By repeatPasswordField = By.xpath("/html/body/div[2]/div/form/table[1]/tbody/tr[3]/td[2]/input");
+    private final By nameField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[1]/td[2]/input");
+    private final By lastnameField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[2]/td[2]/input");
+    private final By emailField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[3]/td[2]/input");
+    private final By phoneField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[4]/td[2]/input");
+    private final By addressField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[5]/td[2]/input");
+    private final By addressField2 = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[6]/td[2]/input");
+    private final By cityField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[7]/td[2]/input");
+    private final By stateField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[8]/td[2]/input");
+    private final By zipField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[9]/td[2]/input");
+    private final By countryField = By.xpath("/html/body/div[2]/div/form/table[2]/tbody/tr[10]/td[2]/input");
+    private final By languajeField = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[1]/td[2]/select");
+    private final By categoryField = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[2]/td[2]/select");
+    private final By myListBox = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[3]/td[2]/input");
+    private final By myBannerBox = By.xpath("//*[@id=\"Catalog\"]/form/table[3]/tbody/tr[4]/td[2]/input");
+    private final By signupButton = By.xpath("/html/body/div[2]/div/form/input");
+    private final String ruteProject = System.getProperty("user.dir");
 
     ReadExcelFile readFile = new ReadExcelFile();
 
@@ -167,13 +167,13 @@ public class SignUpPage extends Base {
 
     }
 
-    public void selectLanguaje() throws IOException{
+    public void selectLanguaje(){
 
         Select languajeList = new Select(findElement(languajeField)); languajeList.selectByVisibleText("japanese");
 
     }
 
-    public void selectCategory() throws IOException{
+    public void selectCategory(){
 
         Select categoryList = new Select(findElement(categoryField)); categoryList.selectByVisibleText("DOGS");
 

@@ -6,13 +6,11 @@ import utilities.Base;
 
 public class CatalogPage extends Base {
 
-    private By birdExample = By.linkText("AV-CB-01");
-    private By dogExample = By.linkText("K9-RT-01");
-    private By catExample = By.linkText("FL-DLH-02");
-    private By itemID = By.linkText("EST-17");
-    private By addToCart = By.linkText("Add to Cart");
-    private By returnCatalogMenu = By.linkText("Return to BIRDS");
-    private By returnItemId = By.linkText("Return to AV-CB-01");
+    private final By birdExample = By.linkText("AV-CB-01");
+    private final By dogExample = By.linkText("K9-RT-01");
+    private final By catExample = By.linkText("FL-DLH-02");
+    private final By itemID = By.linkText("EST-17");
+    private final By addToCart = By.linkText("Add to Cart");
 
     public CatalogPage(WebDriver driver) {
         super(driver);
@@ -52,21 +50,6 @@ public class CatalogPage extends Base {
         Thread.sleep(3000);
 
     }
-
-    public void clickReturnMenuCatalog () throws InterruptedException {
-
-        click(returnCatalogMenu);
-        Thread.sleep(3000);
-
-    }
-
-    public void clickReturnItemId () throws InterruptedException {
-
-        click(returnItemId);
-        Thread.sleep(3000);
-
-    }
-
 
 
 }

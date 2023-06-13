@@ -4,19 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.apache.poi.ss.usermodel.CellType;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 import java.util.Properties;
 
 public class Base {
 
     private WebDriver driver;
     private Properties prop;
-    private String ruteProject = System.getProperty("user.dir");
+    private final String ruteProject = System.getProperty("user.dir");
 
     public Base(WebDriver driver) {
         this.driver = driver;
@@ -36,7 +34,6 @@ public class Base {
             System.out.println("No fue posible llamar archivo properties.");
             e.printStackTrace();
         }
-
 
     }
 
@@ -63,18 +60,6 @@ public class Base {
     public WebElement findElement (By locator){
 
         return driver.findElement(locator);
-
-    }
-
-    public List<WebElement> findElements (By locator){
-
-        return driver.findElements(locator);
-
-    }
-
-    public String getTextElement(WebElement element){
-
-        return element.getText();
 
     }
 
